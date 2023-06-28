@@ -1,0 +1,26 @@
+# The following is a configuration file in yaml.  I will list the main parameters of my folders.
+
+dataset: 
+     script_path: os.path.join(data_path, "raw", "Expanded_data_with_more_features.csv")
+
+model: 
+     script_path: os.path.join(src_path,"..","models")
+
+train:
+     script_path: os.path.join(data_path, "train", 'train.csv'
+
+test:
+     script_path: os.path.join(data_path, "test", 'test.csv'
+
+best_model:
+     script_path: os.path.join(mod_path, "trained_model.pkl")
+     model_type: Pipeline using Standard Scaler, PCA, and Logistic Regression
+
+columns_used:
+     for_Xtrain: df.drop('MathScore', axis=1)
+     for_ytrain: ['MathScore']
+
+traintestsplit:
+     params: X, y, test_size=0.2, random_state=42
+
+balance: SMOTE
